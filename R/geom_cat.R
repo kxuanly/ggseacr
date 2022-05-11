@@ -17,9 +17,9 @@ ggname <- getFromNamespace("ggname", "ggplot2")
 ##' @importFrom grid gpar
 ##' @importFrom grDevices as.raster
 ##' @export
-draw_key_cat <- function(data, params, size) {
+draw_key_nudibranch <- function(data, params, size) {
 
-  filename <- system.file(paste0(data$cat, ".png"), package = "ggcats")
+  filename <- system.file(paste0(data$nudibranch, ".png"), package = "ggnudibranchs")
   img <- as.raster(png::readPNG(filename))
   aspect <- dim(img)[1]/dim(img)[2]
   # rasterGrob
@@ -29,10 +29,10 @@ draw_key_cat <- function(data, params, size) {
 }
 
 
-##' geom layer adding cats
+##' geom layer adding nudibranchs
 ##'
 ##'
-##' @title geom_cat
+##' @title geom_nudibranch
 ##' @param mapping aes mapping
 ##' @param data data
 ##' @param stat stat
@@ -40,7 +40,7 @@ draw_key_cat <- function(data, params, size) {
 ##' @param inherit.aes logical, whether inherit aes from ggplot()
 ##' @param na.rm logical, whether remove NA values
 ##' @param by one of 'width' or 'height'
-##' @param nudge_x horizontal adjustment to nudge cats
+##' @param nudge_x horizontal adjustment to nudge nudibranches
 ##' @param ... additional parameters
 ##' @return geom layer
 ##' @importFrom ggplot2 layer
@@ -48,7 +48,7 @@ draw_key_cat <- function(data, params, size) {
 ##' @examples
 ##' library("ggplot2")
 ##' ggplot(mtcars) +
-##' geom_cat(aes(mpg, wt), cat = "nyancat", size = 5)
+##' geom_nudibranch(aes(mpg, wt), nudibranch = "nyancat", size = 5)
 ##'
 ##' set.seed(1)
 ##' df <- data.frame(x = rnorm(10),
@@ -60,9 +60,9 @@ draw_key_cat <- function(data, params, size) {
 ##'                                   "toast"),
 ##'                                  size = 10, replace = TRUE))
 ##'  ggplot(df) +
-##' geom_cat(aes(x, y, cat = image), size = 5)
+##' geom_nudibranch(aes(x, y, nudibranch = image), size = 5)
 ##'
-geom_cat <- function(mapping = NULL, data = NULL, stat = "identity",
+geom_nudibranch <- function(mapping = NULL, data = NULL, stat = "identity",
                      position = "identity", inherit.aes = TRUE,
                      na.rm = FALSE, by = "width", nudge_x = 0, ...) {
 
@@ -71,7 +71,7 @@ geom_cat <- function(mapping = NULL, data = NULL, stat = "identity",
   layer(
     data = data,
     mapping = mapping,
-    geom = GeomCat,
+    geom = GeomNudibranch,
     stat = stat,
     position = position,
     show.legend = NA,
@@ -93,14 +93,14 @@ geom_cat <- function(mapping = NULL, data = NULL, stat = "identity",
 ##' @importFrom ggplot2 draw_key_blank
 ##' @importFrom grid gTree
 ##' @importFrom grid gList
-GeomCat <- ggplot2::ggproto("GeomCat", ggplot2::Geom,
+GeomNudibranch <- ggplot2::ggproto("GeomNudibranch", ggplot2::Geom,
                      setup_data = function(data, params) {
                        if (is.null(data$subset))
                          return(data)
                        data[which(data$subset),]
                      },
 
-                     default_aes = ggplot2::aes(cat = "nyancat", size = 1,
+                     default_aes = ggplot2::aes(nudibranch = "nyancat", size = 1,
                                        colour = NULL, angle = 0, alpha = 1),
 
                      draw_panel = function(data, panel_params, coord, by, na.rm=FALSE,
@@ -111,11 +111,11 @@ GeomCat <- ggplot2::ggproto("GeomCat", ggplot2::Geom,
                        data <- coord$transform(data, panel_params)
 
                        if (!is.null(.fun) && is.function(.fun)) {
-                         data$ca <- .fun(data$cat)
+                         data$ca <- .fun(data$nudibranch)
                        }
-                       if (is.null(data$cat)) return(NULL)
+                       if (is.null(data$nudibranch)) return(NULL)
 
-                       groups <- split(data, factor(data$cat))
+                       groups <- split(data, factor(data$nudibranch))
                        imgs <- names(groups)
                        grobs <- lapply(seq_along(groups), function(i) {
                          d <- groups[[i]]
@@ -127,12 +127,12 @@ GeomCat <- ggplot2::ggproto("GeomCat", ggplot2::Geom,
                        grobs <- do.call("c", grobs)
                        class(grobs) <- "gList"
 
-                       ggplot2:::ggname("geom_cat",
+                       ggplot2:::ggname("geom_nudibranch",
                               gTree(children = grobs, cl = "fixasp_raster"))
                      },
-                     non_missing_aes = c("size", "cat"),
+                     non_missing_aes = c("size", "nudibranch"),
                      required_aes = c("x", "y"),
-                     draw_key = draw_key_cat ## draw_key_blank ## need to write the `draw_key_cat` function.
+                     draw_key = draw_key_nudibranch ## draw_key_blank ## need to write the `draw_key_cat` function.
 )
 
 
@@ -144,7 +144,7 @@ GeomCat <- ggplot2::ggproto("GeomCat", ggplot2::Geom,
 ##' @importFrom tools file_ext
 imageGrob <- function(x, y, size, img, by, hjust, colour, alpha, image_fun, angle, asp = 1) {
   if (!methods::is(img, "magick-image")) {
-      filename <- system.file(paste0(img, ".png"), package = "ggcats")
+      filename <- system.file(paste0(img, ".png"), package = "ggnudibranchs")
       img <- magick::image_read(filename)
 
     asp <- getAR2(img)/asp
