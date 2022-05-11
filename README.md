@@ -46,7 +46,7 @@ df <- data.frame(x = grid[, 1],
                            
 library(ggplot2)
 ggplot(df) +
- geom_cat(aes(x, y, cat = image), size = 5) +
+ geom_nudibranch(aes(x, y, nudibranch = image), size = 5) +
     xlim(c(0.25, 5.5)) + 
     ylim(c(0.25, 3.5))
 ```
