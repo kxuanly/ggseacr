@@ -1,6 +1,6 @@
-# ggcats
+# ggnudibranchs
 The geom you always wished for adding cats to ggplot2. This package is part of the memeverse.
-The source code of this package is based on geom_image from ggimage.
+The original source code of this package is based on geom_image from ggimage.
 
 
 <p align="center">
@@ -9,24 +9,24 @@ The source code of this package is based on geom_image from ggimage.
 
 
 
-+ Follow me on [Twitter](https://twitter.com/RCoderWeb)
-+ Follow me on [Facebook](https://www.facebook.com/RCODERweb)
-+ Visit my [R programming site](https://r-coder.com/)
++ Follow original creator on [Twitter](https://twitter.com/RCoderWeb)
++ Follow original creator on [Facebook](https://www.facebook.com/RCODERweb)
++ Visit original creators [R programming site](https://r-coder.com/)
 
 ## What is the memeverse?
 
-A collection of funny packages which can be interesting to create plots to show on a first lesson to new R students in order to motivate them learning the language. The other package of the (small) memeverse are [ggdogs](https://github.com/R-CoderDotCom/ggdogs) and [ggbernie](https://github.com/R-CoderDotCom/ggbernie). Statistics and programming can be fun!
+A collection of funny packages which can be interesting to create plots to show on a first lesson to new R students in order to motivate them learning the language. The other package of the (small) memeverse are [ggdogs](https://github.com/R-CoderDotCom/ggdogs), [ggbernie](https://github.com/R-CoderDotCom/ggbernie) and [ggcats](https://github.com/R-CoderDotCom/ggcats) which this is a fork of. Statistics and programming can be fun!
 
 ## Installation
 ```r
 # install.packages("remotes")
-remotes::install_github("R-CoderDotCom/ggcats@main")
+remotes::install_github("Keinn/ggnudibranchs@main")
 ```
 
 
-## Available cats
+## Available cats (soon to be nudibranches
 
-There are 15 cats available:
+There are 15 cats (soon to be nudibranches) available:
 
 ```r
 "nyancat" (default), "bongo", "colonel", "grumpy", "hipster", "lil_bub", "maru",
@@ -58,7 +58,7 @@ ggplot(df) +
 
 ```r
 ggplot(mtcars) +
-  geom_cat(aes(mpg, wt), cat = "nyancat", size = 5)
+  geom_nudibranch(aes(mpg, wt), nudibranch = "nyancat", size = 5)
 ```
 
 <p align="center">
@@ -68,7 +68,7 @@ ggplot(mtcars) +
 
 ```r
 ggplot(mtcars) +
-  geom_cat(aes(mpg, wt, size = cyl), cat = "toast")
+  geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "toast")
 ```
 
 <p align="center">
