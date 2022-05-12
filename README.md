@@ -36,7 +36,7 @@ grid <- expand.grid(1:5, 3:1)
 
 df <- data.frame(x = grid[, 1],
                  y = grid[, 2],
-                 image = c("O.rosacea", "H.crassicornis", "S.shawl", "Sea.lemon", "T.catalinae")
+                 image = c("O.rosacea", "H.crassicornis", "S.shawl", "Sea.lemon", "T.catalinae"))
                            
 library(ggplot2)
 ggplot(df) +
@@ -52,7 +52,7 @@ ggplot(df) +
 
 ```r
 ggplot(mtcars) +
-  geom_nudibranch(aes(mpg, wt), nudibranch = "nyancat", size = 5)
+  geom_nudibranch(aes(mpg, wt), nudibranch = "O.rosacea", size = 5)
 ```
 
 <p align="center">
@@ -62,7 +62,7 @@ ggplot(mtcars) +
 
 ```r
 ggplot(mtcars) +
-  geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "toast")
+  geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "S.shawl")
 ```
 
 <p align="center">
@@ -77,7 +77,7 @@ library(Ecdat)
 data(incomeInequality)
 
 library(tidyverse)
-library(ggcats)
+library(ggseacr)
 library(gganimate)
 
 
@@ -92,15 +92,15 @@ library(gganimate)
 
 dat$cat <- rep(NA, 132)
 
-dat$cat[which(dat$income == "median")] <- "nyancat"
+dat$cat[which(dat$income == "median")] <- "O.rosacea"
 dat$cat[which(dat$income == "99percent")] <- rep(c("pop_close", "pop"), 33)
 
 ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
    geom_line(size = 2) +
-   ggtitle("ggcats, a core package of the memeverse") +
-   geom_cat(aes(cat = cat), size = 5) +
-   xlab("Cats") +
-   ylab("Cats") +
+   ggtitle("ggseacr) +
+   geom_nudibranch(aes(nudibranch = nudibranch), size = 5) +
+   xlab("Nudibranch") +
+   ylab("Nudibranch") +
    theme(legend.position = "none",
          plot.title = element_text(size = 20),
          axis.text = element_blank(),
