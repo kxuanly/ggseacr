@@ -91,7 +91,7 @@ ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
 ```
 
 <p align="center">
- <img src="/ggseacr/blob/main/exampleimg/ggseacr-animated-example.gif">
+ <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-animated-example.gif">
 </p>
 
 
