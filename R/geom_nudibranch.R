@@ -19,7 +19,7 @@ ggname <- getFromNamespace("ggname", "ggplot2")
 ##' @export
 draw_key_nudibranch <- function(data, params, size) {
 
-  filename <- system.file(paste0(data$nudibranch, ".png"), package = "ggnudibranchs")
+  filename <- system.file(paste0(data$nudibranch, ".png"), package = "ggseacr")
   img <- as.raster(png::readPNG(filename))
   aspect <- dim(img)[1]/dim(img)[2]
   # rasterGrob
@@ -62,7 +62,7 @@ draw_key_nudibranch <- function(data, params, size) {
 ##'  ggplot(df) +
 ##' geom_nudibranch(aes(x, y, nudibranch = image), size = 5)
 ##'
-geom_nudibranch <- function(mapping = NULL, data = NULL, stat = "identity",
+geom_seacr <- function(mapping = NULL, data = NULL, stat = "identity",
                      position = "identity", inherit.aes = TRUE,
                      na.rm = FALSE, by = "width", nudge_x = 0, ...) {
 
@@ -144,7 +144,7 @@ GeomNudibranch <- ggplot2::ggproto("GeomNudibranch", ggplot2::Geom,
 ##' @importFrom tools file_ext
 imageGrob <- function(x, y, size, img, by, hjust, colour, alpha, image_fun, angle, asp = 1) {
   if (!methods::is(img, "magick-image")) {
-      filename <- system.file(paste0(img, ".png"), package = "ggnudibranchs")
+      filename <- system.file(paste0(img, ".png"), package = "ggseacr")
       img <- magick::image_read(filename)
 
     asp <- getAR2(img)/asp
