@@ -74,7 +74,7 @@ library(gganimate)
 dat$nudibranch <- rep(NA, 132)
 
 dat$nudibranch[which(dat$income == "median")] <- "O.rosacea"
-dat$nudibranch[which(dat$income == "99percent")] <- rep(c("pop_close", "pop"), 33)
+dat$nudibranch[which(dat$income == "99percent")] <-"H.crassicornis"
 
 ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
   geom_line(size = 2) +
