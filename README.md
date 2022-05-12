@@ -39,6 +39,7 @@ ggplot(df) +
     xlim(c(0.25, 5.5)) + 
     ylim(c(0.25, 3.5))
 ```
+
 <p align="center">
  <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-ggplot-grid.png">
 </p>
@@ -47,9 +48,11 @@ ggplot(df) +
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt), nudibranch = "O.rosacea", size = 5)
 ```
+
 <p align="center">
  <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-ggplot-mtcars.png">
 </p>
+
 ```r
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "S.shawl")
