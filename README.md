@@ -1,6 +1,7 @@
 # ggnudibranchs
 The geom you always wished for adding nudibranchs to ggplot2.
 The original source code of this package is based on geom_image from ggimage.
+Nudibranch images done by Berkana McDowell
 
 
 
