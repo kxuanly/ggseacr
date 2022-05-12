@@ -1,5 +1,5 @@
 # ggnudibranchs
-The geom you always wished for adding cats to ggplot2. This package is part of the memeverse.
+The geom you always wished for adding nudibranchs to ggplot2. This package is part of the memeverse.
 The original source code of this package is based on geom_image from ggimage.
 
 
@@ -24,9 +24,9 @@ remotes::install_github("Keinn/ggnudibranchs@main")
 ```
 
 
-## Available cats (soon to be nudibranches
+## Available nudibranchs
 
-There are 15 cats (soon to be nudibranches) available:
+There are 5 nudibranches available:
 
 ```r
 "nyancat" (default), "bongo", "colonel", "grumpy", "hipster", "lil_bub", "maru",
