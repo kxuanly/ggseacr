@@ -100,7 +100,7 @@ GeomNudibranch <- ggplot2::ggproto("GeomNudibranch", ggplot2::Geom,
                        data[which(data$subset),]
                      },
 
-                     default_aes = ggplot2::aes(nudibranch = "nyancat", size = 1,
+                     default_aes = ggplot2::aes(nudibranch = "O.rosacea", size = 1,
                                        colour = NULL, angle = 0, alpha = 1),
 
                      draw_panel = function(data, panel_params, coord, by, na.rm=FALSE,
