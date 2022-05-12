@@ -1,5 +1,5 @@
-Package: ggnudibranchs
-Title: The Geom you Always Wished for Adding nudibranchs to ggplot2
+Package: ggseacr
+Title: The Geom you Always Wished for Adding Nudibranchs to ggplot2 for SEACR
 Version: 1.0
 Authors@R: 
     person("R", "CODER",
