@@ -1,5 +1,5 @@
 # ggnudibranchs
-The geom you always wished for adding nudibranchs to ggplot2. This package is part of the memeverse.
+The geom you always wished for adding nudibranchs to ggplot2.
 The original source code of this package is based on geom_image from ggimage.
 
 
@@ -13,14 +13,11 @@ The original source code of this package is based on geom_image from ggimage.
 + Follow original creator on [Facebook](https://www.facebook.com/RCODERweb)
 + Visit original creators [R programming site](https://r-coder.com/)
 
-## What is the memeverse?
-
-A collection of funny packages which can be interesting to create plots to show on a first lesson to new R students in order to motivate them learning the language. The other package of the (small) memeverse are [ggdogs](https://github.com/R-CoderDotCom/ggdogs), [ggbernie](https://github.com/R-CoderDotCom/ggbernie) and [ggcats](https://github.com/R-CoderDotCom/ggcats) which this is a fork of. Statistics and programming can be fun!
-
 ## Installation
 ```r
 # install.packages("remotes")
-remotes::install_github("Keinn/ggnudibranchs@main")
+remotes::install_github("kxuanly/ggseacr@main")
+library(ggseacr)
 ```
 
 
@@ -29,8 +26,7 @@ remotes::install_github("Keinn/ggnudibranchs@main")
 There are 5 nudibranches available:
 
 ```r
-"nyancat" (default), "bongo", "colonel", "grumpy", "hipster", "lil_bub", "maru",
-"mouth", "pop", "pop_close", "pusheen", "pusheen_pc", "toast", "venus" and "shironeko"
+"O.rosacea" (default), "H.crassicornis", "S.shawl", "Sea.lemon", and "T.catalinae".
 ```
 
 ## Some examples
@@ -40,9 +36,7 @@ grid <- expand.grid(1:5, 3:1)
 
 df <- data.frame(x = grid[, 1],
                  y = grid[, 2],
-                 image = c("nyancat", "bongo", "colonel", "grumpy", "hipster",
-                           "lil_bub", "maru", "mouth", "pop", "pop_close", 
-                           "pusheen", "pusheen_pc", "toast", "venus", "shironeko"))
+                 image = c("O.rosacea", "H.crassicornis", "S.shawl", "Sea.lemon", "T.catalinae")
                            
 library(ggplot2)
 ggplot(df) +
