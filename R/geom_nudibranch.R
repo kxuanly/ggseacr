@@ -62,7 +62,7 @@ draw_key_nudibranch <- function(data, params, size) {
 ##'  ggplot(df) +
 ##' geom_nudibranch(aes(x, y, nudibranch = image), size = 5)
 ##'
-geom_seacr <- function(mapping = NULL, data = NULL, stat = "identity",
+geom_nudibranch <- function(mapping = NULL, data = NULL, stat = "identity",
                      position = "identity", inherit.aes = TRUE,
                      na.rm = FALSE, by = "width", nudge_x = 0, ...) {
 
