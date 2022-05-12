@@ -3,11 +3,6 @@ The geom you always wished for adding nudibranchs to ggplot2.
 The original source code of this package is based on geom_image from ggimage.
 
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/67192157/105871532-b0a48700-5ff9-11eb-9371-ecd915ded374.png">
-</p>
-
-
 
 + Follow original creator on [Twitter](https://twitter.com/RCoderWeb)
 + Follow original creator on [Facebook](https://www.facebook.com/RCODERweb)
@@ -45,30 +40,16 @@ ggplot(df) +
     ylim(c(0.25, 3.5))
 ```
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/67192157/106767679-6b0c3d80-663b-11eb-96f5-a21f2794bd84.png">
-</p>
-
 
 ```r
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt), nudibranch = "O.rosacea", size = 5)
 ```
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/67192157/105848781-c86f1180-5fdf-11eb-8468-813a41235292.png">
-</p>
-
-
 ```r
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "S.shawl")
 ```
-
-<p align="center">
- <img src="https://user-images.githubusercontent.com/67192157/105849119-416e6900-5fe0-11eb-904e-6dc30be87546.png">
-</p>
-
 
 I took the most part of the following code from [Jonathan Hersh](https://twitter.com/DogmaticPrior).
 
