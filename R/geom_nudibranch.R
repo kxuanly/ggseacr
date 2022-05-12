@@ -48,16 +48,16 @@ draw_key_nudibranch <- function(data, params, size) {
 ##' @examples
 ##' library("ggplot2")
 ##' ggplot(mtcars) +
-##' geom_nudibranch(aes(mpg, wt), nudibranch = "nyancat", size = 5)
+##' geom_nudibranch(aes(mpg, wt), nudibranch = "O.rosacea", size = 5)
 ##'
 ##' set.seed(1)
 ##' df <- data.frame(x = rnorm(10),
 ##'                  y = rnorm(10),
-##'                  image = sample(c("nyancat",
-##'                                   "pusheen",
-##'                                   "colonel",
-##'                                   "venus",
-##'                                   "toast"),
+##'                  image = sample(c("O.rosacea",
+##'                                   "H.crassicornis",
+##'                                   "S.shawl",
+##'                                   "Sea.lemon",
+##'                                   "T.catalinae"),
 ##'                                  size = 10, replace = TRUE))
 ##'  ggplot(df) +
 ##' geom_nudibranch(aes(x, y, nudibranch = image), size = 5)
