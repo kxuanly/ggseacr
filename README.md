@@ -39,17 +39,24 @@ ggplot(df) +
     xlim(c(0.25, 5.5)) + 
     ylim(c(0.25, 3.5))
 ```
-
+<p align="center">
+ <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-ggplot-grid.png">
+</p>
 
 ```r
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt), nudibranch = "O.rosacea", size = 5)
 ```
-
+<p align="center">
+ <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-ggplot-mtcars.png">
+</p>
 ```r
 ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "S.shawl")
 ```
+<p align="center">
+ <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/main/exampleimg/ggseacr-ggplot-mtcars2.png">
+</p>
 
 Most of the code below came from: [Jonathan Hersh](https://twitter.com/DogmaticPrior) and RCoder.
 
@@ -74,7 +81,7 @@ library(gganimate)
 dat$nudibranch <- rep(NA, 132)
 
 dat$nudibranch[which(dat$income == "median")] <- "O.rosacea"
-dat$nudibranch[which(dat$income == "99percent")] <-"H.crassicornis"
+dat$nudibranch[which(dat$income == "99percent")] <- "H.crassicornis"
 
 ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
   geom_line(size = 2) +
