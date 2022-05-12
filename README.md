@@ -51,7 +51,7 @@ ggplot(mtcars) +
   geom_nudibranch(aes(mpg, wt, size = cyl), nudibranch = "S.shawl")
 ```
 
-I took the most part of the following code from [Jonathan Hersh](https://twitter.com/DogmaticPrior).
+Most of the code below came from: [Jonathan Hersh](https://twitter.com/DogmaticPrior) and RCoder.
 
 ```r
 library(Ecdat)
@@ -63,22 +63,22 @@ library(gganimate)
 
 
  dat <-
-   incomeInequality %>%
-   select(Year, P99, median) %>%
-   rename(income_median = median,
-          income_99percent = P99) %>%
-   pivot_longer(cols = starts_with("income"),
-                names_to = "income",
-                names_prefix = "income_")
+  incomeInequality %>%
+  select(Year, P99, median) %>%
+  rename(income_median = median,
+         income_99percent = P99) %>%
+  pivot_longer(cols = starts_with("income"),
+               names_to = "income",
+               names_prefix = "income_")
 
-dat$cat <- rep(NA, 132)
+dat$nudibranch <- rep(NA, 132)
 
-dat$cat[which(dat$income == "median")] <- "O.rosacea"
-dat$cat[which(dat$income == "99percent")] <- rep(c("pop_close", "pop"), 33)
+dat$nudibranch[which(dat$income == "median")] <- "O.rosacea"
+dat$nudibranch[which(dat$income == "99percent")] <- rep(c("pop_close", "pop"), 33)
 
 ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
-   geom_line(size = 2) +
-   ggtitle("ggseacr) +
+  geom_line(size = 2) +
+  ggtitle("ggseacr") +
    geom_nudibranch(aes(nudibranch = nudibranch), size = 5) +
    xlab("Nudibranch") +
    ylab("Nudibranch") +
@@ -87,6 +87,7 @@ ggplot(dat, aes(x = Year, y = value, group = income, color = income)) +
          axis.text = element_blank(),
          axis.ticks = element_blank()) +
    transition_reveal(Year)
+
 ```
 
 <p align="center">
