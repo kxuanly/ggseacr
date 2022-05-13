@@ -1,6 +1,6 @@
 # ggseacr
 
-<p align="right">
+<p align="center">
  <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/daa65b3b967b8a81ccd37f80aaecd8349a165dd7/inst/Gradient_White_Logo.png" height="528" width="408">
 </p>
 
