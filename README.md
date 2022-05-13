@@ -1,8 +1,11 @@
-# ggnudibranchs
+# ggseacr
 The geom you always wished for adding nudibranchs to ggplot2.
 The original source code of this package is based on geom_image from ggimage.
 Nudibranch images done by Berkana McDowell
 
+<p align="right">
+ <img src="https://raw.githubusercontent.com/kxuanly/ggseacr/daa65b3b967b8a81ccd37f80aaecd8349a165dd7/inst/Gradient_White_Logo.png">
+</p>
 
 
 + Follow original creator on [Twitter](https://twitter.com/RCoderWeb)
